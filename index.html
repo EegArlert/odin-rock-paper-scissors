@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors The Game</title>
+    <style>
+        .main-container {
+
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px
+        }
+
+        button:hover {
+            cursor: pointer;
+            border-style: inset !important;
+        }
+
+        button {
+            height: 50px;
+            width: 70px;
+            margin: 20px;
+        }
+
+        .button-container {
+            justify-self: center;
+            flex-grow: 1; 
+        }
+
+        .gameplay-container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            background-color: rgb(227, 227, 227);
+            width: 400px;
+            height: 350px;
+            gap: 30px;
+            border-radius: 5px;
+            padding-left: 150px;
+        }
+
+        .Rock{
+            background-color: gray;
+            border-style: none;
+            border-radius: 5px;
+        }
+
+        .Paper{
+            background-color: rgb(246, 240, 240);
+            border-style: none;
+            border-radius: 5px;
+        }
+
+        .Scissor{
+            background-color: pink;
+            border-style: none;
+            border-radius: 5px;
+        }
+
+        .scoreContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .player-score{
+            margin: 10px 0 10px 0;
+        }
+
+        .game-winner{
+            background-color: rgb(233, 178, 76);
+            border-style: none;
+            border-radius: 5px;
+            padding: 50px 150px 50px 100px;
+            text-align: initial;
+        }
+
+    </style>
+
+
 </head>
+
 <body>
+    <div class="main-container">
+
+        <div class="title-container">
+            <h1>Rock Paper Scissor The Game</h1>
+        </div>
+
+        <div class="button-container"></div>
+
+        <div class="gameplay-container">
+            <div class="player-choice-container">Player Choice:</div>
+            <div class="computer-choice-container">Computer Choice:</div>
+            <div class="round-winner-container">Round winner:</div>
+            <div class="score-container">Score:
+                <div class="player-score">User:</div>
+                <div class="computer-score">Computer:</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="game-winner">Winner:</div>
+        </div>
+    </div>
     <script src="rock-paper-scissors.js"></script>
 </body>
+
 </html>
